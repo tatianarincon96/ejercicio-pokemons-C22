@@ -3,7 +3,7 @@ async function fillPokemonData(name, order) {
   // QUE USARÁS PARA COMPLETAR LAS ACTIVIDADES
   const pokemonData = await getPokemonData(name);
   //Actividades
-  
+
   // 1) Insertar la imagen del pokemon dentro cada card. Para ello,
   // puedes explorar los elementos HTML utilizando las Dev Tools de tu
   // navegador.
@@ -37,18 +37,6 @@ function cargarHabilidad(order, habilidad, stats) {
   cantidad.innerText = amount + "%";
 }
 
-function colorBarra(amount) {
-  let color;
-  if (amount >= 70) {
-    color = "verde";
-  } else if (amount >= 35) {
-    color = "amarillo";
-  } else {
-    color = "rojo";
-  }
-  return color;
-}
-
 function seleccionarHabilidad(habilidad) {
   let index;
   switch (habilidad) {
@@ -66,6 +54,18 @@ function seleccionarHabilidad(habilidad) {
       break;
   }
   return index;
+}
+
+function colorBarra(amount) {
+  let color;
+  if (amount >= 70) {
+    color = "verde";
+  } else if (amount >= 35) {
+    color = "amarillo";
+  } else {
+    color = "rojo";
+  }
+  return color;
 }
 
 //LISTADO DE POKEMONS - PUEDES CAMBIAR POR TU FAVORITO!

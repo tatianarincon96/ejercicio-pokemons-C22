@@ -81,4 +81,4 @@ setTimeout(() => {
     createPokemonCard(pokemon, pokemonNumber);
     fillPokemonData(pokemon, pokemonNumber);
   });
-},3000);
+},5000);

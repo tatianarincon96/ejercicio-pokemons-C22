@@ -72,8 +72,13 @@ function colorBarra(amount) {
 const pokemons = ["pikachu", "bulbasaur", "charmander", "diglett"];
 
 //INICIALIZADOR - NO TOCAR
-pokemons.forEach((pokemon, index) => {
-  const pokemonNumber = index + 1;
-  createPokemonCard(pokemon, pokemonNumber);
-  fillPokemonData(pokemon, pokemonNumber);
-});
+
+setTimeout(() => {
+  const contenedorSpinner = document.querySelector("#contenedor-carga");
+  pokemons.forEach((pokemon, index) => {
+    contenedorSpinner.style.opacity = 0;
+    const pokemonNumber = index + 1;
+    createPokemonCard(pokemon, pokemonNumber);
+    fillPokemonData(pokemon, pokemonNumber);
+  });
+},3000);
